@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato',sans-serif;
+    background-color: #fff;
+    /* font-size: 62.5% /* 1em = 10px */; */
+    font-size: .8em;
+    color: #003a3a;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    --x-height-multiplier: 0.35;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+}
+
+footer {
+    clear: both;
+}
+
+app-entry {
+    /* move to entry.component.css */
+    display: block;
+    padding: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.input-name {
+    margin-top: 10px;
+    width: 150px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: .9em;
+    background-color: white;
+    /* background-image: url('../../photos/usericon.svg'); */
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    border: 2px solid #ccc;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    color:#003a3a;
+    padding: 12px 20px 12px 20px;
+    text-align: left;
+}
+
+.input-name:focus {
+    width: 100%;
+    border: 2px solid #555;
+    outline: none;
+}
+
+form textarea {
+    margin-top: 10px;
+    width: 500px;
+    height: 100px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+    border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
+    border-image: none;
+    border-radius: 6px 6px 6px 6px;
+    border-style: none solid solid none;
+    border-width: medium 1px 1px medium;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+    color: #555555;
+    font-family: "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+    font-size: 1em;
+    line-height: 1.4em;
+    padding: 5px 8px;
+    transition: background-color 0.2s ease 0s;
+}
+
+form textarea:focus {
+    background: none repeat scroll 0 0 #FFFFFF;
+    outline-width: 0;
+}
+
+/* .clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.photo-container img {
+    max-width: 100%;
+}
+
+.photo-container {
+    text-align: left;
+    margin-bottom: 2em;
+    position: relative;
+    overflow: hidden;
+} */
+
+
+.actions {
+    padding: 1em 0;
+}
+
+app-entry-like {
+  margin-right: 1em;
+}
+
+h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+button {
+    background-color: transparent;
+    border-width: 0;
+    font-size: 1.2em;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+button:focus {
+    outline: transparent auto 0; /* remove blue halo */
+}
+
+.liked {
+    color: #00aaff;
+}
+
+.comments.hidden {
+    max-height: 0;
+}
+
+.comments {
+    overflow: hidden;
+    max-height: 1000px;
+    -webkit-transition: max-height 0.8s;
+    -moz-transition: max-height 0.8s;
+    transition: max-height 0.8s;
+}
+
+.comment {
+    padding: .5em 1.5em;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+.comment.odd {
+    background-color: #ccc;
+}
+app-entry-comment-form form {
+  margin-top: 2em;
+}
+app-entry-comment-form div {
+    padding: .5em 0;
+}
+
+label {
+    display: block;
+}
+
+app-entry-comment-form button {
+    padding: .5em .75em;
+    background-color: rgb(255, 255, 255);
+    color: #E0437F;
+    border: .5px solid #E0437F;
+    background: 0 0;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Lato',sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    font-size: .9rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 19px 40px 20px;
+    display: block;
+    flex-basis: 100%;
+    /* width: 100%; */
+    transition: box-shadow 420ms cubic-bezier(.165, .84, .44, 1),
+    color 420ms cubic-bezier(.165, .84, .44, 1),
+    background 420ms cubic-bezier(.165, .84, .44, 1);
+    word-break: break-word;
+}
+
+app-entry-comment-form button:hover {
+    box-shadow: inset 0 0 0 2px #E0437F;
+    /* border-bottom: 0; */
+}
+
+app-entry-comment-form button:active {
+    background-color: #E0437F;
+    color: rgb(255, 255, 255);
+    outline: 0;
+    box-shadow: inset 0 0 0 2px #E0437F;
+}
+
+
+app-entry-comment-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    height: 200px;
+}
+
+.alert {
+    background-color: #cdcdcd;
+    color: #000;
+}
+
+.alert.alert-danger {
+    background-color: #9a0000;
+    color: #fff;
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media screen and (min-width: 25rem) {
+    app-entry-comment-form button {
+        font-size: calc(.9rem + (-.40000000000000036 * (100vw - 400px)/ 624));
+    }
+}
